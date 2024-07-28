@@ -89,7 +89,7 @@ git clone -b master https://github.com/ywt114/luci-app-gpsysupgrade package/lean
 git clone -b master https://github.com/pymumu/openwrt-smartdns package/lean/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 git clone -b master https://github.com/kenzok8/small package/lean/small
-\rm -rf package/lean/small/luci-app-bypass package/lean/small/luci-app-vssr package/lean/small/luci-app-passwall2
+#\rm -rf package/lean/small/luci-app-bypass package/lean/small/luci-app-vssr package/lean/small/luci-app-passwall2
 git clone -b main https://github.com/sirpdboy/luci-app-chatgpt-web package/lean/luci-app-chatgpt-web
 git clone -b master https://github.com/sirpdboy/luci-app-advanced package/lean/luci-app-advanced
 git clone -b master https://github.com/sirpdboy/luci-app-autotimeset package/lean/luci-app-autotimeset
@@ -148,10 +148,10 @@ sed -i 's/Variable2 = "*.*"/Variable2 = "jump"/g' package/lean/luci-app-gpsysupg
 sed -i 's/Variable3 = "*.*"/Variable3 = "x86_64"/g' package/lean/luci-app-gpsysupgrade/root/usr/bin/upgrade.lua
 sed -i 's/Variable4 = "*.*"/Variable4 = "6.6"/g' package/lean/luci-app-gpsysupgrade/root/usr/bin/upgrade.lua
 
-# 回退passwall到2024年1月29日旧版本
-cd package/lean/small/luci-app-passwall
-git reset --hard ecd92aa64174f5e7a200678b4122891764a6b245
-cd ../../../..
-\cp -rf package/lean/mosdns/v2dat package/lean/small
-sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
-sed -i "s/'http/'https/g" package/lean/small/luci-app-passwall/luasrc/view/passwall/global/status.htm
+## 回退passwall到2024年1月29日旧版本
+#cd package/lean/small/luci-app-passwall
+#git reset --hard ecd92aa64174f5e7a200678b4122891764a6b245
+#cd ../../../..
+#\cp -rf package/lean/mosdns/v2dat package/lean/small
+#sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
+#sed -i "s/'http/'https/g" package/lean/small/luci-app-passwall/luasrc/view/passwall/global/status.htm
