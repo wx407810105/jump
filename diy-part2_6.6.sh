@@ -155,4 +155,4 @@ git reset --hard HEAD
 cd ../../../..
 \cp -rf package/lean/mosdns/v2dat package/lean/small
 sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
-sed -i "s/'http/'https/g" package/lean/small/luci-app-passwall/luasrc/view/passwall/global/status.htm
+#sed -i "s/'http/'https/g" package/lean/small/luci-app-passwall/luasrc/view/passwall/global/status.htm
