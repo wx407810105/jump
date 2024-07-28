@@ -74,7 +74,8 @@ curl -fsSL https://raw.githubusercontent.com/ywt114/diy/main/system.lua > feeds/
 # find ./ | grep Makefile | grep pdnsd-alt | xargs rm -f
 \rm -rf feeds/packages/net/v2ray-geodata feeds/packages/net/pdnsd-alt
 \rm -rf feeds/packages/lang/golang
-git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+#git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+git clone -b master https://github.com/kenzok8/golang feeds/packages/lang/golang
 # rm -rf feeds/packages/net/curl
 # git clone -b main https://github.com/sbwml/feeds_packages_net_curl feeds/packages/net/curl
 git clone -b master https://github.com/sbwml/luci-app-alist package/lean/alist
@@ -153,5 +154,5 @@ cd package/lean/small/luci-app-passwall
 #git reset --hard ecd92aa64174f5e7a200678b4122891764a6b245
 cd ../../../..
 \cp -rf package/lean/mosdns/v2dat package/lean/small
-sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
-sed -i "s/'http/'https/g" package/lean/small/luci-app-passwall/luasrc/view/passwall/global/status.htm
+#sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
+#sed -i "s/'http/'https/g" package/lean/small/luci-app-passwall/luasrc/view/passwall/global/status.htm
